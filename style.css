@@ -102,6 +102,7 @@ span {
 .home-img img {
     width: 25vw;
     animation: floatImage 4s ease-in-out infinite;
+    border-radius: 50%;
 }
 
 @keyframes floatImage {
@@ -393,6 +394,11 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+}
+.portfolio-box {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .portfolio-box img {

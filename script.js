@@ -49,14 +49,10 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 // typed js
 const typed = new Typed(".multiple-text", {
-    strings: [
-        "3rd Year Undergraduate Student...",
-        "Web Developer...",
-        "ML Enthusiast...",
-    ],
-    typeSpeed: 70,
-    backSpeed: 90,
-    backDelay: 1000,
+    strings: ["an Aspiring Data Engineer...", "a Web Developer...", "a Problem Solver..."],
+    typeSpeed: 80,
+    backSpeed: 60,
+    backDelay: 1500,
     loop: true,
 });
 
