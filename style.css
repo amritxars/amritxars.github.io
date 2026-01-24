@@ -318,63 +318,9 @@ span {
     margin: 2rem 0 3rem;
 }
 
-.certifications {
-    background: var(--snd-bg-color);
-    padding: 8rem 9%;
-    min-height: auto;
-}
 
-/* Grid layout */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-top: 4rem;
-}
-
-/* Card */
-.cert-card {
-    background: #111;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: 0.4s ease;
-    cursor: pointer;
-}
-
-/* Image */
-/* Card - Now with Sharp Edges */
-.cert-card {
-    display: block; /* Ensures the entire area is clickable */
-    background: #111;
-    border-radius: 0; /* Removed rounded edges */
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: 0.4s ease;
-    cursor: pointer;
-}
-
-/* Image - Removing any inherited rounding */
-.cert-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0; /* Ensures image corners are sharp */
-    transition: 0.4s ease;
-    display: block;
-}
-
-/* Hover effect remains the same for that "pop" */
-.cert-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(0, 194, 168, 0.35);
-}
-
-.cert-card:hover img {
-    transform: scale(1.05);
-}
 .portfolio {
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 
 .portfolio h2 {
@@ -468,6 +414,63 @@ span {
     display: flex;
     justify-content: center;
     margin-top: 4rem;
+}
+
+
+.certifications {
+    background: var(--snd-bg-color);
+    padding: 8rem 9%;
+    min-height: auto;
+}
+
+/* Grid layout */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+/* Card */
+.cert-card {
+    background: #111;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+/* Image */
+/* Card - Now with Sharp Edges */
+.cert-card {
+    display: block; /* Ensures the entire area is clickable */
+    background: #111;
+    border-radius: 0; /* Removed rounded edges */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+/* Image - Removing any inherited rounding */
+.cert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; /* Ensures image corners are sharp */
+    transition: 0.4s ease;
+    display: block;
+}
+
+/* Hover effect remains the same for that "pop" */
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 194, 168, 0.35);
+}
+
+.cert-card:hover img {
+    transform: scale(1.05);
 }
 
 .contact h2 {
