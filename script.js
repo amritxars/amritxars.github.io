@@ -41,7 +41,7 @@ ScrollReveal({
 
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(
-    ".home-img, .portfolio-box:not(.extra-project), .cert-card, .contact form",
+    ".home-img, .portfolio-box:not(.extra-project), .cert-card:not(.extra-cert), .contact form",
     { origin: "bottom" },
 );
 ScrollReveal().reveal(".home-content h1, .about-img", { origin: "left" });
@@ -96,6 +96,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+// CERTIFICATIONS VIEW MORE
+document.addEventListener("DOMContentLoaded", () => {
+    const viewMoreCertBtn = document.getElementById("viewMoreCertBtn");
+    const extraCerts = document.querySelectorAll(".extra-cert");
+    const certSection = document.getElementById("certifications");
+    const header = document.querySelector(".header");
+
+    if (!viewMoreCertBtn || extraCerts.length === 0) return;
+
+    viewMoreCertBtn.addEventListener("click", () => {
+        const isOpening = !extraCerts[0].classList.contains("show");
+
+        if (isOpening) {
+            extraCerts.forEach(cert => cert.classList.add("show"));
+            viewMoreCertBtn.innerText = "View Less";
+        } else {
+            extraCerts.forEach(cert => cert.classList.remove("show"));
+            viewMoreCertBtn.innerText = "View More";
+
+            const headerHeight = header ? header.offsetHeight : 0;
+            const tweak = 60;
+
+            const targetPosition =
+                certSection.offsetTop - headerHeight + tweak;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+            });
+        }
+    });
+});
+
 const contactForm = document.getElementById("contact-form");
 const submitBtn = document.getElementById("submit-btn");
 
